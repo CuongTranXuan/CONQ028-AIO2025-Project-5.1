@@ -1,0 +1,1000 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d14" for="edge" attr.name="weight" attr.type="long" />
+  <key id="d13" for="edge" attr.name="avg_distance_km" attr.type="double" />
+  <key id="d12" for="edge" attr.name="total_transport_cost" attr.type="double" />
+  <key id="d11" for="edge" attr.name="product_list" attr.type="string" />
+  <key id="d10" for="edge" attr.name="number_of_products" attr.type="long" />
+  <key id="d9" for="edge" attr.name="units_transferred" attr.type="long" />
+  <key id="d8" for="node" attr.name="products_received_list" attr.type="string" />
+  <key id="d7" for="node" attr.name="products_sent_list" attr.type="string" />
+  <key id="d6" for="node" attr.name="products_received_count" attr.type="long" />
+  <key id="d5" for="node" attr.name="products_sent_count" attr.type="long" />
+  <key id="d4" for="node" attr.name="total_units" attr.type="long" />
+  <key id="d3" for="node" attr.name="total_units_out" attr.type="long" />
+  <key id="d2" for="node" attr.name="total_units_in" attr.type="long" />
+  <key id="d1" for="node" attr.name="store_id" attr.type="long" />
+  <key id="d0" for="node" attr.name="store_name" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="VinMart - Lotte Mart">
+      <data key="d0">VinMart - Lotte Mart</data>
+      <data key="d1">8</data>
+      <data key="d2">152</data>
+      <data key="d3">145</data>
+      <data key="d4">297</data>
+      <data key="d5">5</data>
+      <data key="d6">12</data>
+      <data key="d7">HomeOne Cotton Bed Sheet Set, Jysk Coffee Maker, Neutrogena Bath Bombs, Ohui Hair Mask, Sulwhasoo Foundation</data>
+      <data key="d8">Acecook Dried Mushrooms, Dell Galaxy Buds2, Dell Keychron K2 Keyboard, Kinh Do Chili Sauce, LG Logitech G502 Mouse, Lenovo Samsung T7 SSD, Masan Rice Vinegar, Nike Cotton V-Neck Tee, Puma Structured Tote Bag, Uniqlo Lightweight Jacket, Vichy Highlighter, Zara Stretch Denim Jeans</data>
+    </node>
+    <node id="Hapro Gò Vấp">
+      <data key="d0">Hapro Gò Vấp</data>
+      <data key="d1">15</data>
+      <data key="d2">227</data>
+      <data key="d3">84</data>
+      <data key="d4">311</data>
+      <data key="d5">5</data>
+      <data key="d6">8</data>
+      <data key="d7">Kinh Do Chili Sauce, Masan Rice Vinegar, Muji Shower Curtain, Ohui Hair Mask, Uniqlo Lightweight Jacket</data>
+      <data key="d8">Acecook Dried Mushrooms, Apple JBL Flip 6, Habitat Ceramic Dinner Set, HomeOne Cotton Bed Sheet Set, Masan Soy Milk, Sulwhasoo Body Scrub, Sulwhasoo Foundation, Vinamilk Green Tea</data>
+    </node>
+    <node id="Cẩm Lệ Market Center">
+      <data key="d0">Cẩm Lệ Market Center</data>
+      <data key="d1">10</data>
+      <data key="d2">74</data>
+      <data key="d3">187</data>
+      <data key="d4">261</data>
+      <data key="d5">11</data>
+      <data key="d6">3</data>
+      <data key="d7">Dell Galaxy Buds2, Dell Keychron K2 Keyboard, Kinh Do Chili Sauce, LG Logitech G502 Mouse, Lenovo Samsung T7 SSD, Neutrogena Bath Bombs, Nike Cotton V-Neck Tee, Sulwhasoo Body Scrub, Vichy Highlighter, Vinh Thanh Soy Sauce, Zara Stretch Denim Jeans</data>
+      <data key="d8">GAP Slim Fit Chinos, Habitat Ceramic Dinner Set, Ohui Hair Mask</data>
+    </node>
+    <node id="CircleK - Diamond Plaza">
+      <data key="d0">CircleK - Diamond Plaza</data>
+      <data key="d1">20</data>
+      <data key="d2">243</data>
+      <data key="d3">65</data>
+      <data key="d4">308</data>
+      <data key="d5">4</data>
+      <data key="d6">9</data>
+      <data key="d7">Dell Galaxy Buds2, Jysk Coffee Maker, Lenovo Samsung T7 SSD, Ohui Hair Mask</data>
+      <data key="d8">Acecook Dried Mushrooms, Cozy Living Electric Kettle, GAP Slim Fit Chinos, Kinh Do Chili Sauce, Masan Soy Milk, Sulwhasoo Foundation, Uniqlo Straw Hat, Vichy Highlighter, Vinamilk Green Tea</data>
+    </node>
+    <node id="Saigon Retail - Han Market Complex">
+      <data key="d0">Saigon Retail - Han Market Complex</data>
+      <data key="d1">12</data>
+      <data key="d2">76</data>
+      <data key="d3">125</data>
+      <data key="d4">201</data>
+      <data key="d5">4</data>
+      <data key="d6">5</data>
+      <data key="d7">Dell Keychron K2 Keyboard, Puma Structured Tote Bag, Sulwhasoo Body Scrub, Vinamilk Green Tea</data>
+      <data key="d8">Cozy Living Electric Kettle, Habitat Ceramic Dinner Set, IKEA Non-Stick Frying Pan, Neutrogena Bath Bombs, Vinh Thanh Soy Sauce</data>
+    </node>
+    <node id="Quận 3 Market Center">
+      <data key="d0">Quận 3 Market Center</data>
+      <data key="d1">16</data>
+      <data key="d2">223</data>
+      <data key="d3">171</data>
+      <data key="d4">394</data>
+      <data key="d5">7</data>
+      <data key="d6">8</data>
+      <data key="d7">Dell AirPods Pro, GAP Slim Fit Chinos, Lenovo Samsung T7 SSD, Masan Rice Vinegar, Neutrogena Perfume, Ohui Hair Mask, Vichy Highlighter</data>
+      <data key="d8">Dell Galaxy Buds2, Dell Keychron K2 Keyboard, Jysk Coffee Maker, Masan Soy Milk, Muji Shower Curtain, Vinamilk Green Tea, Vinh Thanh Soy Sauce, Zara Stretch Denim Jeans</data>
+    </node>
+    <node id="Tân Bình Market Center">
+      <data key="d0">Tân Bình Market Center</data>
+      <data key="d1">17</data>
+      <data key="d2">145</data>
+      <data key="d3">217</data>
+      <data key="d4">362</data>
+      <data key="d5">5</data>
+      <data key="d6">7</data>
+      <data key="d7">Acecook Dried Mushrooms, Jysk Coffee Maker, Masan Soy Milk, Ohui Hair Mask, Zara Stretch Denim Jeans</data>
+      <data key="d8">Apple JBL Flip 6, Lenovo Samsung T7 SSD, Puma Structured Tote Bag, Sulwhasoo Body Scrub, Uniqlo Straw Hat, Vichy Highlighter, Vinamilk Green Tea</data>
+    </node>
+    <node id="Mega Market Quận 7">
+      <data key="d0">Mega Market Quận 7</data>
+      <data key="d1">13</data>
+      <data key="d2">47</data>
+      <data key="d3">100</data>
+      <data key="d4">147</data>
+      <data key="d5">5</data>
+      <data key="d6">4</data>
+      <data key="d7">Cozy Living Electric Kettle, Dell AirPods Pro, Dell Keychron K2 Keyboard, IKEA Non-Stick Frying Pan, Vinh Thanh Soy Sauce</data>
+      <data key="d8">GAP Slim Fit Chinos, Muji Shower Curtain, Sulwhasoo Body Scrub, Sulwhasoo Foundation</data>
+    </node>
+    <node id="Aeon Quận 1">
+      <data key="d0">Aeon Quận 1</data>
+      <data key="d1">14</data>
+      <data key="d2">141</data>
+      <data key="d3">140</data>
+      <data key="d4">281</data>
+      <data key="d5">6</data>
+      <data key="d6">7</data>
+      <data key="d7">Dell Keychron K2 Keyboard, GAP Slim Fit Chinos, Habitat Ceramic Dinner Set, HomeOne Cotton Bed Sheet Set, Muji Shower Curtain, Vinamilk Green Tea</data>
+      <data key="d8">Acecook Dried Mushrooms, Jysk Coffee Maker, Kinh Do Chili Sauce, Neutrogena Bath Bombs, Neutrogena Perfume, Sulwhasoo Foundation, Vinh Thanh Soy Sauce</data>
+    </node>
+    <node id="FiviMart - Vivo City">
+      <data key="d0">FiviMart - Vivo City</data>
+      <data key="d1">18</data>
+      <data key="d2">148</data>
+      <data key="d3">169</data>
+      <data key="d4">317</data>
+      <data key="d5">6</data>
+      <data key="d6">8</data>
+      <data key="d7">Apple JBL Flip 6, Dell Galaxy Buds2, GAP Slim Fit Chinos, Jysk Coffee Maker, Masan Soy Milk, Uniqlo Straw Hat</data>
+      <data key="d8">Habitat Ceramic Dinner Set, Kinh Do Chili Sauce, Masan Rice Vinegar, Muji Shower Curtain, Neutrogena Perfume, Ohui Hair Mask, Uniqlo Lightweight Jacket, Vinamilk Green Tea</data>
+    </node>
+    <node id="Aeon Ba Đình">
+      <data key="d0">Aeon Ba Đình</data>
+      <data key="d1">7</data>
+      <data key="d2">113</data>
+      <data key="d3">64</data>
+      <data key="d4">177</data>
+      <data key="d5">5</data>
+      <data key="d6">5</data>
+      <data key="d7">Acecook Dried Mushrooms, Cozy Living Electric Kettle, GAP Slim Fit Chinos, Ohui Hair Mask, Sulwhasoo Foundation</data>
+      <data key="d8">HomeOne Cotton Bed Sheet Set, LG Logitech G502 Mouse, Masan Soy Milk, Puma Structured Tote Bag, Vinh Thanh Soy Sauce</data>
+    </node>
+    <node id="Saigon Retail - Lotte Mart">
+      <data key="d0">Saigon Retail - Lotte Mart</data>
+      <data key="d1">9</data>
+      <data key="d2">60</data>
+      <data key="d3">102</data>
+      <data key="d4">162</data>
+      <data key="d5">6</data>
+      <data key="d6">4</data>
+      <data key="d7">Apple JBL Flip 6, Cozy Living Electric Kettle, GAP Slim Fit Chinos, Habitat Ceramic Dinner Set, Masan Rice Vinegar, Uniqlo Lightweight Jacket</data>
+      <data key="d8">Jysk Coffee Maker, Muji Shower Curtain, Nike Cotton V-Neck Tee, Ohui Hair Mask</data>
+    </node>
+    <node id="Lan Chi - Indochina Plaza">
+      <data key="d0">Lan Chi - Indochina Plaza</data>
+      <data key="d1">1</data>
+      <data key="d2">130</data>
+      <data key="d3">20</data>
+      <data key="d4">150</data>
+      <data key="d5">2</data>
+      <data key="d6">6</data>
+      <data key="d7">Vichy Highlighter, Vinh Thanh Soy Sauce</data>
+      <data key="d8">Acecook Dried Mushrooms, Apple JBL Flip 6, Dell AirPods Pro, GAP Slim Fit Chinos, LG Logitech G502 Mouse, Sulwhasoo Body Scrub</data>
+    </node>
+    <node id="VinMart Long Biên">
+      <data key="d0">VinMart Long Biên</data>
+      <data key="d1">5</data>
+      <data key="d2">145</data>
+      <data key="d3">157</data>
+      <data key="d4">302</data>
+      <data key="d5">3</data>
+      <data key="d6">8</data>
+      <data key="d7">Apple JBL Flip 6, Dell Keychron K2 Keyboard, LG Logitech G502 Mouse</data>
+      <data key="d8">Cozy Living Electric Kettle, IKEA Non-Stick Frying Pan, Jysk Coffee Maker, Nike Cotton V-Neck Tee, Puma Structured Tote Bag, Uniqlo Lightweight Jacket, Uniqlo Straw Hat, Vichy Highlighter</data>
+    </node>
+    <node id="Hapro Thanh Xuân">
+      <data key="d0">Hapro Thanh Xuân</data>
+      <data key="d1">2</data>
+      <data key="d2">123</data>
+      <data key="d3">150</data>
+      <data key="d4">273</data>
+      <data key="d5">6</data>
+      <data key="d6">7</data>
+      <data key="d7">IKEA Non-Stick Frying Pan, Lenovo Samsung T7 SSD, Puma Structured Tote Bag, Sulwhasoo Foundation, Uniqlo Straw Hat, Vichy Highlighter</data>
+      <data key="d8">Apple JBL Flip 6, Dell AirPods Pro, Dell Galaxy Buds2, Dell Keychron K2 Keyboard, Neutrogena Bath Bombs, Nike Cotton V-Neck Tee, Uniqlo Lightweight Jacket</data>
+    </node>
+    <node id="Bình Thạnh Market Center">
+      <data key="d0">Bình Thạnh Market Center</data>
+      <data key="d1">19</data>
+      <data key="d2">159</data>
+      <data key="d3">189</data>
+      <data key="d4">348</data>
+      <data key="d5">7</data>
+      <data key="d6">8</data>
+      <data key="d7">Apple JBL Flip 6, Dell Galaxy Buds2, HomeOne Cotton Bed Sheet Set, Kinh Do Chili Sauce, Neutrogena Bath Bombs, Puma Structured Tote Bag, Vinamilk Green Tea</data>
+      <data key="d8">Dell AirPods Pro, Jysk Coffee Maker, Lenovo Samsung T7 SSD, Masan Rice Vinegar, Neutrogena Perfume, Ohui Hair Mask, Uniqlo Straw Hat, Zara Stretch Denim Jeans</data>
+    </node>
+    <node id="Co.op Mart Mỹ Đình">
+      <data key="d0">Co.op Mart Mỹ Đình</data>
+      <data key="d1">3</data>
+      <data key="d2">104</data>
+      <data key="d3">217</data>
+      <data key="d4">321</data>
+      <data key="d5">7</data>
+      <data key="d6">4</data>
+      <data key="d7">Apple JBL Flip 6, Dell AirPods Pro, Dell Galaxy Buds2, Dell Keychron K2 Keyboard, HomeOne Cotton Bed Sheet Set, Masan Soy Milk, Uniqlo Lightweight Jacket</data>
+      <data key="d8">IKEA Non-Stick Frying Pan, LG Logitech G502 Mouse, Nike Cotton V-Neck Tee, Zara Stretch Denim Jeans</data>
+    </node>
+    <node id="Hoàn Kiếm Market Center">
+      <data key="d0">Hoàn Kiếm Market Center</data>
+      <data key="d1">6</data>
+      <data key="d2">89</data>
+      <data key="d3">74</data>
+      <data key="d4">163</data>
+      <data key="d5">4</data>
+      <data key="d6">5</data>
+      <data key="d7">Dell Galaxy Buds2, Jysk Coffee Maker, Sulwhasoo Body Scrub, Uniqlo Lightweight Jacket</data>
+      <data key="d8">Cozy Living Electric Kettle, Dell AirPods Pro, Dell Keychron K2 Keyboard, HomeOne Cotton Bed Sheet Set, IKEA Non-Stick Frying Pan</data>
+    </node>
+    <node id="Co.op Mart Hai Bà Trưng">
+      <data key="d0">Co.op Mart Hai Bà Trưng</data>
+      <data key="d1">4</data>
+      <data key="d2">80</data>
+      <data key="d3">124</data>
+      <data key="d4">204</data>
+      <data key="d5">6</data>
+      <data key="d6">3</data>
+      <data key="d7">HomeOne Cotton Bed Sheet Set, IKEA Non-Stick Frying Pan, Jysk Coffee Maker, Neutrogena Bath Bombs, Nike Cotton V-Neck Tee, Zara Stretch Denim Jeans</data>
+      <data key="d8">Dell Galaxy Buds2, Lenovo Samsung T7 SSD, Sulwhasoo Foundation</data>
+    </node>
+    <node id="Hòa Vang Market Center">
+      <data key="d0">Hòa Vang Market Center</data>
+      <data key="d1">11</data>
+      <data key="d2">48</data>
+      <data key="d3">27</data>
+      <data key="d4">75</data>
+      <data key="d5">3</data>
+      <data key="d6">4</data>
+      <data key="d7">Jysk Coffee Maker, Muji Shower Curtain, Uniqlo Lightweight Jacket</data>
+      <data key="d8">Apple JBL Flip 6, Habitat Ceramic Dinner Set, HomeOne Cotton Bed Sheet Set, Masan Rice Vinegar</data>
+    </node>
+    <edge source="VinMart - Lotte Mart" target="Hapro Gò Vấp">
+      <data key="d9">38</data>
+      <data key="d10">1</data>
+      <data key="d11">Sulwhasoo Foundation</data>
+      <data key="d12">27895917.57</data>
+      <data key="d13">611.75</data>
+      <data key="d14">38</data>
+    </edge>
+    <edge source="VinMart - Lotte Mart" target="CircleK - Diamond Plaza">
+      <data key="d9">34</data>
+      <data key="d10">1</data>
+      <data key="d11">Sulwhasoo Foundation</data>
+      <data key="d12">24195923.47</data>
+      <data key="d13">593.04</data>
+      <data key="d14">34</data>
+    </edge>
+    <edge source="VinMart - Lotte Mart" target="Aeon Quận 1">
+      <data key="d9">18</data>
+      <data key="d10">1</data>
+      <data key="d11">Sulwhasoo Foundation</data>
+      <data key="d12">13091083.83</data>
+      <data key="d13">606.07</data>
+      <data key="d14">18</data>
+    </edge>
+    <edge source="VinMart - Lotte Mart" target="Mega Market Quận 7">
+      <data key="d9">4</data>
+      <data key="d10">1</data>
+      <data key="d11">Sulwhasoo Foundation</data>
+      <data key="d12">2831566.1</data>
+      <data key="d13">589.91</data>
+      <data key="d14">4</data>
+    </edge>
+    <edge source="VinMart - Lotte Mart" target="Hòa Vang Market Center">
+      <data key="d9">11</data>
+      <data key="d10">1</data>
+      <data key="d11">HomeOne Cotton Bed Sheet Set</data>
+      <data key="d12">276266.56</data>
+      <data key="d13">10.46</data>
+      <data key="d14">11</data>
+    </edge>
+    <edge source="VinMart - Lotte Mart" target="Saigon Retail - Lotte Mart">
+      <data key="d9">8</data>
+      <data key="d10">1</data>
+      <data key="d11">Jysk Coffee Maker</data>
+      <data key="d12">181744.58</data>
+      <data key="d13">9.47</data>
+      <data key="d14">8</data>
+    </edge>
+    <edge source="VinMart - Lotte Mart" target="Cẩm Lệ Market Center">
+      <data key="d9">22</data>
+      <data key="d10">1</data>
+      <data key="d11">Ohui Hair Mask</data>
+      <data key="d12">176114.65</data>
+      <data key="d13">3.34</data>
+      <data key="d14">22</data>
+    </edge>
+    <edge source="VinMart - Lotte Mart" target="Saigon Retail - Han Market Complex">
+      <data key="d9">10</data>
+      <data key="d10">1</data>
+      <data key="d11">Neutrogena Bath Bombs</data>
+      <data key="d12">131516.14</data>
+      <data key="d13">5.48</data>
+      <data key="d14">10</data>
+    </edge>
+    <edge source="Hapro Gò Vấp" target="FiviMart - Vivo City">
+      <data key="d9">84</data>
+      <data key="d10">5</data>
+      <data key="d11">Kinh Do Chili Sauce, Masan Rice Vinegar, Muji Shower Curtain, Ohui Hair Mask, Uniqlo Lightweight Jacket</data>
+      <data key="d12">1250210.83</data>
+      <data key="d13">6.2</data>
+      <data key="d14">84</data>
+    </edge>
+    <edge source="Cẩm Lệ Market Center" target="Hapro Gò Vấp">
+      <data key="d9">34</data>
+      <data key="d10">1</data>
+      <data key="d11">Sulwhasoo Body Scrub</data>
+      <data key="d12">25082856.58</data>
+      <data key="d13">614.78</data>
+      <data key="d14">34</data>
+    </edge>
+    <edge source="Cẩm Lệ Market Center" target="Tân Bình Market Center">
+      <data key="d9">4</data>
+      <data key="d10">1</data>
+      <data key="d11">Sulwhasoo Body Scrub</data>
+      <data key="d12">2889675.59</data>
+      <data key="d13">602.02</data>
+      <data key="d14">4</data>
+    </edge>
+    <edge source="Cẩm Lệ Market Center" target="Saigon Retail - Lotte Mart">
+      <data key="d9">28</data>
+      <data key="d10">1</data>
+      <data key="d11">Nike Cotton V-Neck Tee</data>
+      <data key="d12">530656.77</data>
+      <data key="d13">7.9</data>
+      <data key="d14">28</data>
+    </edge>
+    <edge source="Cẩm Lệ Market Center" target="VinMart - Lotte Mart">
+      <data key="d9">96</data>
+      <data key="d10">8</data>
+      <data key="d11">Dell Galaxy Buds2, Dell Keychron K2 Keyboard, Kinh Do Chili Sauce, LG Logitech G502 Mouse, Lenovo Samsung T7 SSD, Nike Cotton V-Neck Tee, Vichy Highlighter, Zara Stretch Denim Jeans</data>
+      <data key="d12">768500.28</data>
+      <data key="d13">3.34</data>
+      <data key="d14">96</data>
+    </edge>
+    <edge source="Cẩm Lệ Market Center" target="Saigon Retail - Han Market Complex">
+      <data key="d9">25</data>
+      <data key="d10">2</data>
+      <data key="d11">Neutrogena Bath Bombs, Vinh Thanh Soy Sauce</data>
+      <data key="d12">137993.7</data>
+      <data key="d13">2.3</data>
+      <data key="d14">25</data>
+    </edge>
+    <edge source="CircleK - Diamond Plaza" target="Cẩm Lệ Market Center">
+      <data key="d9">16</data>
+      <data key="d10">1</data>
+      <data key="d11">Ohui Hair Mask</data>
+      <data key="d12">11444504.38</data>
+      <data key="d13">596.07</data>
+      <data key="d14">16</data>
+    </edge>
+    <edge source="CircleK - Diamond Plaza" target="Bình Thạnh Market Center">
+      <data key="d9">33</data>
+      <data key="d10">2</data>
+      <data key="d11">Jysk Coffee Maker, Lenovo Samsung T7 SSD</data>
+      <data key="d12">1022514.83</data>
+      <data key="d13">12.91</data>
+      <data key="d14">33</data>
+    </edge>
+    <edge source="CircleK - Diamond Plaza" target="Tân Bình Market Center">
+      <data key="d9">13</data>
+      <data key="d10">1</data>
+      <data key="d11">Lenovo Samsung T7 SSD</data>
+      <data key="d12">435053.09</data>
+      <data key="d13">13.94</data>
+      <data key="d14">13</data>
+    </edge>
+    <edge source="CircleK - Diamond Plaza" target="Quận 3 Market Center">
+      <data key="d9">3</data>
+      <data key="d10">1</data>
+      <data key="d11">Dell Galaxy Buds2</data>
+      <data key="d12">134242.97</data>
+      <data key="d13">18.64</data>
+      <data key="d14">3</data>
+    </edge>
+    <edge source="Saigon Retail - Han Market Complex" target="Quận 3 Market Center">
+      <data key="d9">33</data>
+      <data key="d10">1</data>
+      <data key="d11">Vinamilk Green Tea</data>
+      <data key="d12">24033428.15</data>
+      <data key="d13">606.9</data>
+      <data key="d14">33</data>
+    </edge>
+    <edge source="Saigon Retail - Han Market Complex" target="Hapro Gò Vấp">
+      <data key="d9">32</data>
+      <data key="d10">1</data>
+      <data key="d11">Vinamilk Green Tea</data>
+      <data key="d12">23661401.14</data>
+      <data key="d13">616.18</data>
+      <data key="d14">32</data>
+    </edge>
+    <edge source="Saigon Retail - Han Market Complex" target="Tân Bình Market Center">
+      <data key="d9">23</data>
+      <data key="d10">1</data>
+      <data key="d11">Sulwhasoo Body Scrub</data>
+      <data key="d12">16655759.44</data>
+      <data key="d13">603.47</data>
+      <data key="d14">23</data>
+    </edge>
+    <edge source="Saigon Retail - Han Market Complex" target="Mega Market Quận 7">
+      <data key="d9">15</data>
+      <data key="d10">1</data>
+      <data key="d11">Sulwhasoo Body Scrub</data>
+      <data key="d12">10699530.98</data>
+      <data key="d13">594.42</data>
+      <data key="d14">15</data>
+    </edge>
+    <edge source="Saigon Retail - Han Market Complex" target="FiviMart - Vivo City">
+      <data key="d9">12</data>
+      <data key="d10">1</data>
+      <data key="d11">Vinamilk Green Tea</data>
+      <data key="d12">8876618.33</data>
+      <data key="d13">616.43</data>
+      <data key="d14">12</data>
+    </edge>
+    <edge source="Saigon Retail - Han Market Complex" target="VinMart - Lotte Mart">
+      <data key="d9">10</data>
+      <data key="d10">2</data>
+      <data key="d11">Dell Keychron K2 Keyboard, Puma Structured Tote Bag</data>
+      <data key="d12">131516.14</data>
+      <data key="d13">5.48</data>
+      <data key="d14">10</data>
+    </edge>
+    <edge source="Quận 3 Market Center" target="CircleK - Diamond Plaza">
+      <data key="d9">38</data>
+      <data key="d10">2</data>
+      <data key="d11">GAP Slim Fit Chinos, Vichy Highlighter</data>
+      <data key="d12">1700410.99</data>
+      <data key="d13">18.64</data>
+      <data key="d14">38</data>
+    </edge>
+    <edge source="Quận 3 Market Center" target="FiviMart - Vivo City">
+      <data key="d9">27</data>
+      <data key="d10">2</data>
+      <data key="d11">Neutrogena Perfume, Ohui Hair Mask</data>
+      <data key="d12">1066905.61</data>
+      <data key="d13">16.46</data>
+      <data key="d14">27</data>
+    </edge>
+    <edge source="Quận 3 Market Center" target="Aeon Quận 1">
+      <data key="d9">22</data>
+      <data key="d10">1</data>
+      <data key="d11">Neutrogena Perfume</data>
+      <data key="d12">546355.52</data>
+      <data key="d13">10.35</data>
+      <data key="d14">22</data>
+    </edge>
+    <edge source="Quận 3 Market Center" target="Bình Thạnh Market Center">
+      <data key="d9">74</data>
+      <data key="d10">4</data>
+      <data key="d11">Dell AirPods Pro, Lenovo Samsung T7 SSD, Masan Rice Vinegar, Neutrogena Perfume</data>
+      <data key="d12">1056759.77</data>
+      <data key="d13">5.95</data>
+      <data key="d14">74</data>
+    </edge>
+    <edge source="Quận 3 Market Center" target="Mega Market Quận 7">
+      <data key="d9">9</data>
+      <data key="d10">1</data>
+      <data key="d11">GAP Slim Fit Chinos</data>
+      <data key="d12">285055.79</data>
+      <data key="d13">13.2</data>
+      <data key="d14">9</data>
+    </edge>
+    <edge source="Quận 3 Market Center" target="Tân Bình Market Center">
+      <data key="d9">1</data>
+      <data key="d10">1</data>
+      <data key="d11">Vichy Highlighter</data>
+      <data key="d12">11731.54</data>
+      <data key="d13">4.89</data>
+      <data key="d14">1</data>
+    </edge>
+    <edge source="Tân Bình Market Center" target="VinMart - Lotte Mart">
+      <data key="d9">18</data>
+      <data key="d10">1</data>
+      <data key="d11">Acecook Dried Mushrooms</data>
+      <data key="d12">12937457.45</data>
+      <data key="d13">598.96</data>
+      <data key="d14">18</data>
+    </edge>
+    <edge source="Tân Bình Market Center" target="Hapro Gò Vấp">
+      <data key="d9">29</data>
+      <data key="d10">1</data>
+      <data key="d11">Acecook Dried Mushrooms</data>
+      <data key="d12">1423115.91</data>
+      <data key="d13">20.45</data>
+      <data key="d14">29</data>
+    </edge>
+    <edge source="Tân Bình Market Center" target="CircleK - Diamond Plaza">
+      <data key="d9">62</data>
+      <data key="d10">2</data>
+      <data key="d11">Acecook Dried Mushrooms, Masan Soy Milk</data>
+      <data key="d12">2074868.58</data>
+      <data key="d13">13.94</data>
+      <data key="d14">62</data>
+    </edge>
+    <edge source="Tân Bình Market Center" target="Quận 3 Market Center">
+      <data key="d9">70</data>
+      <data key="d10">3</data>
+      <data key="d11">Jysk Coffee Maker, Masan Soy Milk, Zara Stretch Denim Jeans</data>
+      <data key="d12">821207.95</data>
+      <data key="d13">4.89</data>
+      <data key="d14">70</data>
+    </edge>
+    <edge source="Tân Bình Market Center" target="FiviMart - Vivo City">
+      <data key="d9">6</data>
+      <data key="d10">1</data>
+      <data key="d11">Ohui Hair Mask</data>
+      <data key="d12">234746.48</data>
+      <data key="d13">16.3</data>
+      <data key="d14">6</data>
+    </edge>
+    <edge source="Tân Bình Market Center" target="Aeon Quận 1">
+      <data key="d9">8</data>
+      <data key="d10">1</data>
+      <data key="d11">Acecook Dried Mushrooms</data>
+      <data key="d12">180306.54</data>
+      <data key="d13">9.39</data>
+      <data key="d14">8</data>
+    </edge>
+    <edge source="Tân Bình Market Center" target="Bình Thạnh Market Center">
+      <data key="d9">24</data>
+      <data key="d10">2</data>
+      <data key="d11">Ohui Hair Mask, Zara Stretch Denim Jeans</data>
+      <data key="d12">155079.57</data>
+      <data key="d13">2.69</data>
+      <data key="d14">24</data>
+    </edge>
+    <edge source="Mega Market Quận 7" target="Saigon Retail - Han Market Complex">
+      <data key="d9">20</data>
+      <data key="d10">1</data>
+      <data key="d11">IKEA Non-Stick Frying Pan</data>
+      <data key="d12">14266041.3</data>
+      <data key="d13">594.42</data>
+      <data key="d14">20</data>
+    </edge>
+    <edge source="Mega Market Quận 7" target="Quận 3 Market Center">
+      <data key="d9">48</data>
+      <data key="d10">2</data>
+      <data key="d11">Dell Keychron K2 Keyboard, Vinh Thanh Soy Sauce</data>
+      <data key="d12">1520297.52</data>
+      <data key="d13">13.2</data>
+      <data key="d14">48</data>
+    </edge>
+    <edge source="Mega Market Quận 7" target="Aeon Quận 1">
+      <data key="d9">19</data>
+      <data key="d10">1</data>
+      <data key="d11">Vinh Thanh Soy Sauce</data>
+      <data key="d12">774278.43</data>
+      <data key="d13">16.98</data>
+      <data key="d14">19</data>
+    </edge>
+    <edge source="Mega Market Quận 7" target="CircleK - Diamond Plaza">
+      <data key="d9">7</data>
+      <data key="d10">1</data>
+      <data key="d11">Cozy Living Electric Kettle</data>
+      <data key="d12">202951.41</data>
+      <data key="d13">12.08</data>
+      <data key="d14">7</data>
+    </edge>
+    <edge source="Mega Market Quận 7" target="Bình Thạnh Market Center">
+      <data key="d9">6</data>
+      <data key="d10">1</data>
+      <data key="d11">Dell AirPods Pro</data>
+      <data key="d12">154487.05</data>
+      <data key="d13">10.73</data>
+      <data key="d14">6</data>
+    </edge>
+    <edge source="Aeon Quận 1" target="Quận 3 Market Center">
+      <data key="d9">44</data>
+      <data key="d10">2</data>
+      <data key="d11">Dell Keychron K2 Keyboard, Muji Shower Curtain</data>
+      <data key="d12">1092711.03</data>
+      <data key="d13">10.35</data>
+      <data key="d14">44</data>
+    </edge>
+    <edge source="Aeon Quận 1" target="Mega Market Quận 7">
+      <data key="d9">15</data>
+      <data key="d10">1</data>
+      <data key="d11">Muji Shower Curtain</data>
+      <data key="d12">611272.45</data>
+      <data key="d13">16.98</data>
+      <data key="d14">15</data>
+    </edge>
+    <edge source="Aeon Quận 1" target="Tân Bình Market Center">
+      <data key="d9">20</data>
+      <data key="d10">1</data>
+      <data key="d11">Vinamilk Green Tea</data>
+      <data key="d12">450766.35</data>
+      <data key="d13">9.39</data>
+      <data key="d14">20</data>
+    </edge>
+    <edge source="Aeon Quận 1" target="CircleK - Diamond Plaza">
+      <data key="d9">12</data>
+      <data key="d10">1</data>
+      <data key="d11">GAP Slim Fit Chinos</data>
+      <data key="d12">420668.3</data>
+      <data key="d13">14.61</data>
+      <data key="d14">12</data>
+    </edge>
+    <edge source="Aeon Quận 1" target="Hapro Gò Vấp">
+      <data key="d9">30</data>
+      <data key="d10">3</data>
+      <data key="d11">Habitat Ceramic Dinner Set, HomeOne Cotton Bed Sheet Set, Vinamilk Green Tea</data>
+      <data key="d12">818507.08</data>
+      <data key="d13">11.37</data>
+      <data key="d14">30</data>
+    </edge>
+    <edge source="Aeon Quận 1" target="FiviMart - Vivo City">
+      <data key="d9">19</data>
+      <data key="d10">1</data>
+      <data key="d11">Habitat Ceramic Dinner Set</data>
+      <data key="d12">317078.64</data>
+      <data key="d13">6.95</data>
+      <data key="d14">19</data>
+    </edge>
+    <edge source="FiviMart - Vivo City" target="CircleK - Diamond Plaza">
+      <data key="d9">27</data>
+      <data key="d10">1</data>
+      <data key="d11">Uniqlo Straw Hat</data>
+      <data key="d12">1242038.32</data>
+      <data key="d13">19.17</data>
+      <data key="d14">27</data>
+    </edge>
+    <edge source="FiviMart - Vivo City" target="Tân Bình Market Center">
+      <data key="d9">27</data>
+      <data key="d10">1</data>
+      <data key="d11">Uniqlo Straw Hat</data>
+      <data key="d12">1056359.18</data>
+      <data key="d13">16.3</data>
+      <data key="d14">27</data>
+    </edge>
+    <edge source="FiviMart - Vivo City" target="Bình Thạnh Market Center">
+      <data key="d9">22</data>
+      <data key="d10">1</data>
+      <data key="d11">Uniqlo Straw Hat</data>
+      <data key="d12">725153.32</data>
+      <data key="d13">13.73</data>
+      <data key="d14">22</data>
+    </edge>
+    <edge source="FiviMart - Vivo City" target="Hapro Gò Vấp">
+      <data key="d9">61</data>
+      <data key="d10">2</data>
+      <data key="d11">Apple JBL Flip 6, Masan Soy Milk</data>
+      <data key="d12">907891.2</data>
+      <data key="d13">6.2</data>
+      <data key="d14">61</data>
+    </edge>
+    <edge source="FiviMart - Vivo City" target="Quận 3 Market Center">
+      <data key="d9">17</data>
+      <data key="d10">2</data>
+      <data key="d11">Dell Galaxy Buds2, Jysk Coffee Maker</data>
+      <data key="d12">671755.38</data>
+      <data key="d13">16.46</data>
+      <data key="d14">17</data>
+    </edge>
+    <edge source="FiviMart - Vivo City" target="Aeon Quận 1">
+      <data key="d9">13</data>
+      <data key="d10">1</data>
+      <data key="d11">Jysk Coffee Maker</data>
+      <data key="d12">216948.54</data>
+      <data key="d13">6.95</data>
+      <data key="d14">13</data>
+    </edge>
+    <edge source="FiviMart - Vivo City" target="Mega Market Quận 7">
+      <data key="d9">2</data>
+      <data key="d10">1</data>
+      <data key="d11">GAP Slim Fit Chinos</data>
+      <data key="d12">114126.12</data>
+      <data key="d13">23.78</data>
+      <data key="d14">2</data>
+    </edge>
+    <edge source="Aeon Ba Đình" target="Saigon Retail - Lotte Mart">
+      <data key="d9">9</data>
+      <data key="d10">1</data>
+      <data key="d11">Ohui Hair Mask</data>
+      <data key="d12">6448681.11</data>
+      <data key="d13">597.1</data>
+      <data key="d14">9</data>
+    </edge>
+    <edge source="Aeon Ba Đình" target="Mega Market Quận 7">
+      <data key="d9">2</data>
+      <data key="d10">1</data>
+      <data key="d11">Sulwhasoo Foundation</data>
+      <data key="d12">2686101.69</data>
+      <data key="d13">1119.21</data>
+      <data key="d14">2</data>
+    </edge>
+    <edge source="Aeon Ba Đình" target="VinMart Long Biên">
+      <data key="d9">6</data>
+      <data key="d10">1</data>
+      <data key="d11">Cozy Living Electric Kettle</data>
+      <data key="d12">295579.55</data>
+      <data key="d13">20.53</data>
+      <data key="d14">6</data>
+    </edge>
+    <edge source="Aeon Ba Đình" target="Lan Chi - Indochina Plaza">
+      <data key="d9">42</data>
+      <data key="d10">2</data>
+      <data key="d11">Acecook Dried Mushrooms, GAP Slim Fit Chinos</data>
+      <data key="d12">325031.2</data>
+      <data key="d13">3.22</data>
+      <data key="d14">42</data>
+    </edge>
+    <edge source="Aeon Ba Đình" target="Hoàn Kiếm Market Center">
+      <data key="d9">5</data>
+      <data key="d10">1</data>
+      <data key="d11">Cozy Living Electric Kettle</data>
+      <data key="d12">110627.15</data>
+      <data key="d13">9.22</data>
+      <data key="d14">5</data>
+    </edge>
+    <edge source="Saigon Retail - Lotte Mart" target="Cẩm Lệ Market Center">
+      <data key="d9">36</data>
+      <data key="d10">2</data>
+      <data key="d11">GAP Slim Fit Chinos, Habitat Ceramic Dinner Set</data>
+      <data key="d12">682272.99</data>
+      <data key="d13">7.9</data>
+      <data key="d14">36</data>
+    </edge>
+    <edge source="Saigon Retail - Lotte Mart" target="Saigon Retail - Han Market Complex">
+      <data key="d9">21</data>
+      <data key="d10">2</data>
+      <data key="d11">Cozy Living Electric Kettle, Habitat Ceramic Dinner Set</data>
+      <data key="d12">432775.11</data>
+      <data key="d13">8.59</data>
+      <data key="d14">21</data>
+    </edge>
+    <edge source="Saigon Retail - Lotte Mart" target="VinMart - Lotte Mart">
+      <data key="d9">8</data>
+      <data key="d10">2</data>
+      <data key="d11">Masan Rice Vinegar, Uniqlo Lightweight Jacket</data>
+      <data key="d12">181744.58</data>
+      <data key="d13">9.47</data>
+      <data key="d14">8</data>
+    </edge>
+    <edge source="Saigon Retail - Lotte Mart" target="Hòa Vang Market Center">
+      <data key="d9">37</data>
+      <data key="d10">3</data>
+      <data key="d11">Apple JBL Flip 6, Habitat Ceramic Dinner Set, Masan Rice Vinegar</data>
+      <data key="d12">89434.7</data>
+      <data key="d13">1.01</data>
+      <data key="d14">37</data>
+    </edge>
+    <edge source="Lan Chi - Indochina Plaza" target="VinMart - Lotte Mart">
+      <data key="d9">8</data>
+      <data key="d10">1</data>
+      <data key="d11">Vichy Highlighter</data>
+      <data key="d12">5772723.05</data>
+      <data key="d13">601.33</data>
+      <data key="d14">8</data>
+    </edge>
+    <edge source="Lan Chi - Indochina Plaza" target="Tân Bình Market Center">
+      <data key="d9">3</data>
+      <data key="d10">1</data>
+      <data key="d11">Vichy Highlighter</data>
+      <data key="d12">4067509.97</data>
+      <data key="d13">1129.86</data>
+      <data key="d14">3</data>
+    </edge>
+    <edge source="Lan Chi - Indochina Plaza" target="Aeon Ba Đình">
+      <data key="d9">9</data>
+      <data key="d10">1</data>
+      <data key="d11">Vinh Thanh Soy Sauce</data>
+      <data key="d12">69649.54</data>
+      <data key="d13">3.22</data>
+      <data key="d14">9</data>
+    </edge>
+    <edge source="VinMart Long Biên" target="Aeon Ba Đình">
+      <data key="d9">42</data>
+      <data key="d10">1</data>
+      <data key="d11">LG Logitech G502 Mouse</data>
+      <data key="d12">2069056.84</data>
+      <data key="d13">20.53</data>
+      <data key="d14">42</data>
+    </edge>
+    <edge source="VinMart Long Biên" target="Lan Chi - Indochina Plaza">
+      <data key="d9">26</data>
+      <data key="d10">1</data>
+      <data key="d11">LG Logitech G502 Mouse</data>
+      <data key="d12">1155559.7</data>
+      <data key="d13">18.52</data>
+      <data key="d14">26</data>
+    </edge>
+    <edge source="VinMart Long Biên" target="Co.op Mart Mỹ Đình">
+      <data key="d9">28</data>
+      <data key="d10">1</data>
+      <data key="d11">LG Logitech G502 Mouse</data>
+      <data key="d12">1146950.17</data>
+      <data key="d13">17.07</data>
+      <data key="d14">28</data>
+    </edge>
+    <edge source="VinMart Long Biên" target="Hapro Thanh Xuân">
+      <data key="d9">42</data>
+      <data key="d10">1</data>
+      <data key="d11">Apple JBL Flip 6</data>
+      <data key="d12">746741.06</data>
+      <data key="d13">7.41</data>
+      <data key="d14">42</data>
+    </edge>
+    <edge source="VinMart Long Biên" target="Hoàn Kiếm Market Center">
+      <data key="d9">19</data>
+      <data key="d10">1</data>
+      <data key="d11">Dell Keychron K2 Keyboard</data>
+      <data key="d12">516209.35</data>
+      <data key="d13">11.32</data>
+      <data key="d14">19</data>
+    </edge>
+    <edge source="Hapro Thanh Xuân" target="Aeon Ba Đình">
+      <data key="d9">33</data>
+      <data key="d10">1</data>
+      <data key="d11">Puma Structured Tote Bag</data>
+      <data key="d12">1657067.47</data>
+      <data key="d13">20.92</data>
+      <data key="d14">33</data>
+    </edge>
+    <edge source="Hapro Thanh Xuân" target="Co.op Mart Hai Bà Trưng">
+      <data key="d9">44</data>
+      <data key="d10">2</data>
+      <data key="d11">Lenovo Samsung T7 SSD, Sulwhasoo Foundation</data>
+      <data key="d12">654551.78</data>
+      <data key="d13">6.2</data>
+      <data key="d14">44</data>
+    </edge>
+    <edge source="Hapro Thanh Xuân" target="VinMart Long Biên">
+      <data key="d9">73</data>
+      <data key="d10">4</data>
+      <data key="d11">IKEA Non-Stick Frying Pan, Puma Structured Tote Bag, Uniqlo Straw Hat, Vichy Highlighter</data>
+      <data key="d12">1297907.09</data>
+      <data key="d13">7.41</data>
+      <data key="d14">73</data>
+    </edge>
+    <edge source="Bình Thạnh Market Center" target="CircleK - Diamond Plaza">
+      <data key="d9">63</data>
+      <data key="d10">2</data>
+      <data key="d11">Kinh Do Chili Sauce, Vinamilk Green Tea</data>
+      <data key="d12">1952073.77</data>
+      <data key="d13">12.91</data>
+      <data key="d14">63</data>
+    </edge>
+    <edge source="Bình Thạnh Market Center" target="Aeon Quận 1">
+      <data key="d9">61</data>
+      <data key="d10">2</data>
+      <data key="d11">Kinh Do Chili Sauce, Neutrogena Bath Bombs</data>
+      <data key="d12">993582.01</data>
+      <data key="d13">6.79</data>
+      <data key="d14">61</data>
+    </edge>
+    <edge source="Bình Thạnh Market Center" target="Tân Bình Market Center">
+      <data key="d9">54</data>
+      <data key="d10">3</data>
+      <data key="d11">Apple JBL Flip 6, Puma Structured Tote Bag, Vinamilk Green Tea</data>
+      <data key="d12">348929.03</data>
+      <data key="d13">2.69</data>
+      <data key="d14">54</data>
+    </edge>
+    <edge source="Bình Thạnh Market Center" target="Hapro Gò Vấp">
+      <data key="d9">3</data>
+      <data key="d10">1</data>
+      <data key="d11">HomeOne Cotton Bed Sheet Set</data>
+      <data key="d12">127841.53</data>
+      <data key="d13">17.76</data>
+      <data key="d14">3</data>
+    </edge>
+    <edge source="Bình Thạnh Market Center" target="Quận 3 Market Center">
+      <data key="d9">8</data>
+      <data key="d10">1</data>
+      <data key="d11">Dell Galaxy Buds2</data>
+      <data key="d12">114244.3</data>
+      <data key="d13">5.95</data>
+      <data key="d14">8</data>
+    </edge>
+    <edge source="Co.op Mart Mỹ Đình" target="Lan Chi - Indochina Plaza">
+      <data key="d9">45</data>
+      <data key="d10">2</data>
+      <data key="d11">Apple JBL Flip 6, Dell AirPods Pro</data>
+      <data key="d12">1538489.23</data>
+      <data key="d13">14.25</data>
+      <data key="d14">45</data>
+    </edge>
+    <edge source="Co.op Mart Mỹ Đình" target="Hoàn Kiếm Market Center">
+      <data key="d9">52</data>
+      <data key="d10">2</data>
+      <data key="d11">Dell AirPods Pro, Dell Keychron K2 Keyboard</data>
+      <data key="d12">1420514.45</data>
+      <data key="d13">11.38</data>
+      <data key="d14">52</data>
+    </edge>
+    <edge source="Co.op Mart Mỹ Đình" target="Hapro Thanh Xuân">
+      <data key="d9">62</data>
+      <data key="d10">3</data>
+      <data key="d11">Dell AirPods Pro, Dell Keychron K2 Keyboard, Uniqlo Lightweight Jacket</data>
+      <data key="d12">1892658.23</data>
+      <data key="d13">12.72</data>
+      <data key="d14">62</data>
+    </edge>
+    <edge source="Co.op Mart Mỹ Đình" target="Aeon Ba Đình">
+      <data key="d9">29</data>
+      <data key="d10">2</data>
+      <data key="d11">HomeOne Cotton Bed Sheet Set, Masan Soy Milk</data>
+      <data key="d12">913880.52</data>
+      <data key="d13">13.13</data>
+      <data key="d14">29</data>
+    </edge>
+    <edge source="Co.op Mart Mỹ Đình" target="Co.op Mart Hai Bà Trưng">
+      <data key="d9">29</data>
+      <data key="d10">1</data>
+      <data key="d11">Dell Galaxy Buds2</data>
+      <data key="d12">537457.35</data>
+      <data key="d13">7.72</data>
+      <data key="d14">29</data>
+    </edge>
+    <edge source="Hoàn Kiếm Market Center" target="VinMart Long Biên">
+      <data key="d9">47</data>
+      <data key="d10">2</data>
+      <data key="d11">Jysk Coffee Maker, Uniqlo Lightweight Jacket</data>
+      <data key="d12">1276938.92</data>
+      <data key="d13">11.32</data>
+      <data key="d14">47</data>
+    </edge>
+    <edge source="Hoàn Kiếm Market Center" target="Lan Chi - Indochina Plaza">
+      <data key="d9">17</data>
+      <data key="d10">1</data>
+      <data key="d11">Sulwhasoo Body Scrub</data>
+      <data key="d12">299272.1</data>
+      <data key="d13">7.34</data>
+      <data key="d14">17</data>
+    </edge>
+    <edge source="Hoàn Kiếm Market Center" target="Co.op Mart Hai Bà Trưng">
+      <data key="d9">7</data>
+      <data key="d10">1</data>
+      <data key="d11">Dell Galaxy Buds2</data>
+      <data key="d12">131443.95</data>
+      <data key="d13">7.82</data>
+      <data key="d14">7</data>
+    </edge>
+    <edge source="Hoàn Kiếm Market Center" target="Hapro Thanh Xuân">
+      <data key="d9">3</data>
+      <data key="d10">1</data>
+      <data key="d11">Dell Galaxy Buds2</data>
+      <data key="d12">93090.19</data>
+      <data key="d13">12.93</data>
+      <data key="d14">3</data>
+    </edge>
+    <edge source="Co.op Mart Hai Bà Trưng" target="Co.op Mart Mỹ Đình">
+      <data key="d9">76</data>
+      <data key="d10">3</data>
+      <data key="d11">IKEA Non-Stick Frying Pan, Nike Cotton V-Neck Tee, Zara Stretch Denim Jeans</data>
+      <data key="d12">1408508.91</data>
+      <data key="d13">7.72</data>
+      <data key="d14">76</data>
+    </edge>
+    <edge source="Co.op Mart Hai Bà Trưng" target="VinMart Long Biên">
+      <data key="d9">19</data>
+      <data key="d10">2</data>
+      <data key="d11">Jysk Coffee Maker, Nike Cotton V-Neck Tee</data>
+      <data key="d12">426619.32</data>
+      <data key="d13">9.36</data>
+      <data key="d14">19</data>
+    </edge>
+    <edge source="Co.op Mart Hai Bà Trưng" target="Hoàn Kiếm Market Center">
+      <data key="d9">13</data>
+      <data key="d10">2</data>
+      <data key="d11">HomeOne Cotton Bed Sheet Set, IKEA Non-Stick Frying Pan</data>
+      <data key="d12">244110.2</data>
+      <data key="d13">7.82</data>
+      <data key="d14">13</data>
+    </edge>
+    <edge source="Co.op Mart Hai Bà Trưng" target="Hapro Thanh Xuân">
+      <data key="d9">16</data>
+      <data key="d10">2</data>
+      <data key="d11">Neutrogena Bath Bombs, Nike Cotton V-Neck Tee</data>
+      <data key="d12">238018.83</data>
+      <data key="d13">6.2</data>
+      <data key="d14">16</data>
+    </edge>
+    <edge source="Hòa Vang Market Center" target="VinMart - Lotte Mart">
+      <data key="d9">12</data>
+      <data key="d10">1</data>
+      <data key="d11">Uniqlo Lightweight Jacket</data>
+      <data key="d12">301381.71</data>
+      <data key="d13">10.46</data>
+      <data key="d14">12</data>
+    </edge>
+    <edge source="Hòa Vang Market Center" target="Saigon Retail - Lotte Mart">
+      <data key="d9">15</data>
+      <data key="d10">2</data>
+      <data key="d11">Jysk Coffee Maker, Muji Shower Curtain</data>
+      <data key="d12">36257.31</data>
+      <data key="d13">1.01</data>
+      <data key="d14">15</data>
+    </edge>
+  </graph>
+</graphml>

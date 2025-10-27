@@ -17,10 +17,17 @@ classifiers = [
 ]
 dependencies = [
     "loguru",
+    "matplotlib",
+    "networkx",
+    "numpy",
+    "pandas",
     "pip",
     "pytest",
     "python-dotenv",
     "ruff",
+    "scipy",
+    "seaborn",
+    "tabulate",
     "tqdm",
     "typer",
 ]
@@ -29,13 +36,13 @@ requires-python = "~=3.12.0"
 
 [tool.ruff]
 line-length = 99
-src = ["inventory_optimization"]
-include = ["pyproject.toml", "inventory_optimization/**/*.py"]
+src = ["src"]
+include = ["pyproject.toml", "src/**/*.py"]
 
 [tool.ruff.lint]
 extend-select = ["I"]  # Add import sorting
 
 [tool.ruff.lint.isort]
-known-first-party = ["inventory_optimization"]
+known-first-party = ["src"]
 force-sort-within-sections = true
 
