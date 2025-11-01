@@ -1,5 +1,3 @@
-import os
-
 import numpy as np
 import pandas as pd
 
@@ -8,242 +6,207 @@ class DistanceCalculator:
     def __init__(self, stores, use_google_maps=False, api_key=None):
         """
         Initialize with store data and calculation method.
-
         Args:
             stores: List of Store objects or DataFrame with store data
-            use_google_maps: Whether to use Google Maps API (default: False)
-            api_key: Google Maps API key (required if use_google_maps is True)
         """
         self.stores = stores
         self.use_google_maps = use_google_maps
         self.api_key = api_key
 
-        # If stores is a DataFrame, convert to list of store-like objects
+        # Canonical DataFrame
         if isinstance(stores, pd.DataFrame):
-            self.store_data = stores
+            self.store_data = stores.copy()
         else:
             self.store_data = pd.DataFrame(
                 [
                     {
                         "store_id": store.id,
-                        "store_name": store.name,
-                        "city": store.city,
-                        "latitude": store.latitude,
-                        "longitude": store.longitude,
+                        "store_name": getattr(store, "name", None),
+                        "city": getattr(store, "city", None),
+                        "latitude": getattr(store, "latitude", None),
+                        "longitude": getattr(store, "longitude", None),
                     }
                     for store in stores
                 ]
             )
 
+        # ---- Missing value handling (impute with averages) ----
+        for col in ["store_id", "city", "latitude", "longitude"]:
+            if col not in self.store_data.columns:
+                self.store_data[col] = pd.NA
+
+        self.store_data["store_id"] = self.store_data["store_id"].astype(str)
+        self.store_data["city"] = (
+            self.store_data["city"].astype(str).replace(
+                {"None": pd.NA, "nan": pd.NA}).fillna("unknown")
+        )
+        self.store_data["latitude"] = pd.to_numeric(
+            self.store_data["latitude"], errors="coerce")
+        self.store_data["longitude"] = pd.to_numeric(
+            self.store_data["longitude"], errors="coerce")
+
+        # Per-city means
+        city_means = (
+            self.store_data.groupby("city", dropna=False)[
+                ["latitude", "longitude"]]
+            .mean(numeric_only=True)
+        )
+
+        def fill_from_city_mean(row):
+            lat, lon = row["latitude"], row["longitude"]
+            if pd.isna(lat) or pd.isna(lon):
+                if row["city"] in city_means.index:
+                    means = city_means.loc[row["city"]]
+                    if pd.isna(lat) and pd.notna(means["latitude"]):
+                        lat = means["latitude"]
+                    if pd.isna(lon) and pd.notna(means["longitude"]):
+                        lon = means["longitude"]
+            return pd.Series([lat, lon], index=["latitude", "longitude"])
+
+        self.store_data[["latitude", "longitude"]] = self.store_data.apply(
+            fill_from_city_mean, axis=1)
+
+        # Global fallback
+        global_lat = self.store_data["latitude"].mean(numeric_only=True)
+        global_lon = self.store_data["longitude"].mean(numeric_only=True)
+        self.store_data["latitude"] = self.store_data["latitude"].fillna(
+            global_lat)
+        self.store_data["longitude"] = self.store_data["longitude"].fillna(
+            global_lon)
+
     def calculate_haversine_distance(self, lat1, lon1, lat2, lon2):
-        """
-        Calculate the great circle distance between two points
-        on the earth (specified in decimal degrees)
-        """
         # Convert decimal degrees to radians
         lat1, lon1, lat2, lon2 = map(np.radians, [lat1, lon1, lat2, lon2])
-
-        # Haversine formula
         dlon = lon2 - lon1
         dlat = lat2 - lat1
-        a = np.sin(dlat / 2) ** 2 + np.cos(lat1) * np.cos(lat2) * np.sin(dlon / 2) ** 2
+        a = np.sin(dlat / 2) ** 2 + np.cos(lat1) * \
+            np.cos(lat2) * np.sin(dlon / 2) ** 2
         c = 2 * np.arcsin(np.sqrt(a))
-        r = 6371  # Radius of earth in kilometers
+        r = 6371
         return c * r
 
+    def _fill_matrix_nas(self, mat: pd.DataFrame, fill_diagonal_zero: bool = True) -> pd.DataFrame:
+        if fill_diagonal_zero:
+            np.fill_diagonal(mat.values, 0.0)
+
+        # Row-wise mean fill
+        for i, idx in enumerate(mat.index):
+            row = pd.to_numeric(mat.loc[idx], errors="coerce")
+            # ignore diagonal at i
+            non_diag = row.drop(labels=[idx], errors="ignore")
+            mean_val = non_diag.mean(skipna=True)
+            mat.loc[idx] = row.fillna(mean_val)
+
+        # Global fallback
+        global_mean = pd.to_numeric(mat.stack(), errors="coerce").mean()
+        mat = mat.fillna(global_mean)
+        return mat
+
     def generate_distance_matrix(self, output_path=None):
-        """
-        Generate a matrix of distances between all stores.
-
-        Args:
-            output_path: Optional path to save distance matrix to CSV
-
-        Returns:
-            DataFrame with distances between stores
-        """
         print("Generating distance matrix...")
 
-        num_stores = len(self.store_data)
         store_ids = self.store_data["store_id"].tolist()
 
-        # Initialize empty matrix using integer store IDs
-        distance_matrix = pd.DataFrame(index=store_ids, columns=store_ids)
+        # Vectorized haversine computation
+        lat = self.store_data['latitude'].to_numpy(dtype=float)
+        lon = self.store_data['longitude'].to_numpy(dtype=float)
+        lat_rad = np.radians(lat)[:, None]  # (N,1)
+        lon_rad = np.radians(lon)[:, None]
+        dlat = lat_rad.T - lat_rad  # (N,N)
+        dlon = lon_rad.T - lon_rad
+        a = np.sin(dlat / 2.0) ** 2 + \
+            np.cos(lat_rad) @ np.cos(lat_rad.T) * (np.sin(dlon / 2.0) ** 2)
+        c = 2.0 * np.arcsin(np.sqrt(np.clip(a, 0.0, 1.0)))
+        r = 6371.0
+        dist_mat = r * c
+        np.fill_diagonal(dist_mat, 0.0)
 
-        # Fill diagonal with zeros
-        for store_id in store_ids:
-            distance_matrix.loc[store_id, store_id] = 0
+        distance_matrix = pd.DataFrame(
+            dist_mat, index=store_ids, columns=store_ids, dtype=float)
 
-        if self.use_google_maps and self.api_key:
-            # Use Google Maps Distance Matrix API
-            try:
-                from googlemaps import Client
-
-                gmaps = Client(key=self.api_key)
-
-                # Prepare origins and destinations
-                origins = [
-                    (row["latitude"], row["longitude"])
-                    for _, row in self.store_data.iterrows()
-                ]
-                destinations = origins.copy()
-
-                # Use Distance Matrix API
-                result = gmaps.distance_matrix(
-                    origins=origins,
-                    destinations=destinations,
-                    mode="driving",
-                    units="metric",
-                )
-
-                # Parse results
-                for i, row in enumerate(result["rows"]):
-                    from_id = self.store_data.iloc[i]["store_id"]
-                    for j, cell in enumerate(row["elements"]):
-                        to_id = self.store_data.iloc[j]["store_id"]
-                        if from_id != to_id:  # Skip diagonal (already set to 0)
-                            # Distance in kilometers
-                            distance_matrix.loc[from_id, to_id] = (
-                                cell["distance"]["value"] / 1000
-                            )
-
-                print("Used Google Maps API for distance calculations")
-
-            except ImportError:
-                print(
-                    "googlemaps package not installed. Falling back to haversine distance."
-                )
-                self.use_google_maps = False
-            except Exception as e:
-                print(
-                    f"Error using Google Maps API: {str(e)}. Falling back to haversine distance."
-                )
-                self.use_google_maps = False
-
-        if not self.use_google_maps:
-            # Use haversine formula
-            for i, row1 in self.store_data.iterrows():
-                from_id = row1["store_id"]
-                for j, row2 in self.store_data.iterrows():
-                    to_id = row2["store_id"]
-                    if from_id != to_id:  # Skip diagonal (already set to 0)
-                        distance = self.calculate_haversine_distance(
-                            row1["latitude"],
-                            row1["longitude"],
-                            row2["latitude"],
-                            row2["longitude"],
-                        )
-                        distance_matrix.loc[from_id, to_id] = distance
-
-            print("Used haversine formula for distance calculations")
-
-        # If output path is provided, save to CSV
         if output_path:
-            # Keep store IDs as integers throughout
-            distance_matrix.index = distance_matrix.index.astype(int)
-            distance_matrix.columns = distance_matrix.columns.astype(int)
             distance_matrix.to_csv(output_path)
-            print(f"Saved distance matrix to {output_path}")
 
         return distance_matrix
 
     def generate_transport_cost_matrix(self, distance_matrix=None, output_path=None):
-        """
-        Generate a transport cost matrix based on distances.
-
-        Args:
-            distance_matrix: Optional pre-calculated distance matrix
-            output_path: Optional path to save transport cost matrix to CSV
-
-        Returns:
-            DataFrame with transport costs between stores
-        """
         print("Generating transport cost matrix...")
 
-        # If no distance matrix provided, calculate it
         if distance_matrix is None:
             distance_matrix = self.generate_distance_matrix()
 
-        # Create a transport cost matrix with the same dimensions
         transport_cost_matrix = pd.DataFrame(
-            index=distance_matrix.index, columns=distance_matrix.columns
+            index=distance_matrix.index, columns=distance_matrix.columns, dtype=float
         )
 
-        # Get city information for each store
-        store_city_map = self.store_data.set_index("store_id")["city"].to_dict()
+        store_city_map = self.store_data.set_index(
+            "store_id")["city"].fillna("unknown").to_dict()
 
-        # Cost parameters
-        base_cost = 2_000  # Base cost per km in VND
-        intercity_factor = 1.2  # 50% more expensive between cities
-
-        # Distance factors (shorter distances are less efficient due to fixed costs)
+        base_cost = 2000.0
+        intercity_factor = 1.2
         distance_factors = {
-            100: 1.2,  # < 100 km: 20% more expensive per km
-            500: 1.0,  # 50-500 km: standard rate
-            9999: 0.5,  # > 500 km: 50% less expensive per km (economies of scale)
+            100: 1.2,
+            500: 1.0,
+            float("inf"): 0.5,
         }
 
-        # Calculate transport costs
-        for from_id in transport_cost_matrix.index:
-            for to_id in transport_cost_matrix.columns:
-                if from_id != to_id:  # Skip diagonal
-                    # Get distance
-                    distance = distance_matrix.loc[from_id, to_id]
+        # Vectorized approach for cost: compute per-pair
+        for i, from_id in enumerate(transport_cost_matrix.index):
+            from_city = store_city_map.get(from_id, "unknown")
+            row_dist = pd.to_numeric(
+                distance_matrix.loc[from_id], errors="coerce")
+            to_cities = [store_city_map.get(cid, "unknown")
+                         for cid in transport_cost_matrix.columns]
+            city_factors = np.array(
+                [intercity_factor if from_city != c else 1.0 for c in to_cities], dtype=float)
 
-                    # Determine city factor
-                    from_city = store_city_map[from_id]
-                    to_city = store_city_map[to_id]
-                    city_factor = intercity_factor if from_city != to_city else 1.0
+            # Distance factors per column
+            d = row_dist.to_numpy(dtype=float)
+            dfactor = np.where(d < 100, 1.2, np.where(d < 500, 1.0, 0.5))
 
-                    # Determine distance factor
-                    distance_factor = None
-                    for threshold, factor in sorted(distance_factors.items()):
-                        if distance < threshold:
-                            distance_factor = factor
-                            break
+            costs = base_cost * d * city_factors * dfactor
+            costs[i] = 0.0  # diagonal
+            transport_cost_matrix.loc[from_id] = costs
 
-                    if distance_factor is None:
-                        distance_factor = list(distance_factors.values())[-1]
-
-                    # Calculate cost
-                    cost = base_cost * distance * city_factor * distance_factor
-                    transport_cost_matrix.loc[from_id, to_id] = cost
-
-        # If output path is provided, save to CSV
         if output_path:
-            # Keep store IDs as integers throughout
-            transport_cost_matrix.index = transport_cost_matrix.index.astype(int)
-            transport_cost_matrix.columns = transport_cost_matrix.columns.astype(int)
             transport_cost_matrix.to_csv(output_path)
-            print(f"Saved transport cost matrix to {output_path}")
 
         return transport_cost_matrix
 
 
 if __name__ == "__main__":
-    import os
+    import pandas as pd
 
-    # Check if store data exists
-    if not os.path.exists("data/stores.csv"):
-        print("Store data not found. Please run store_generator.py first.")
-        exit(1)
+    # Load Olist sellers and geolocation datasets
+    sellers = pd.read_csv("olist_sellers_dataset.csv")
+    geo = pd.read_csv("olist_geolocation_dataset.csv")
 
-    # Load store data
-    store_data = pd.read_csv("data/stores.csv")
-
-    # Create calculator
-    calculator = DistanceCalculator(store_data)
-
-    # Generate matrices
-    distance_matrix = calculator.generate_distance_matrix("data/distance_matrix.csv")
-    transport_cost_matrix = calculator.generate_transport_cost_matrix(
-        distance_matrix, "data/transport_cost_matrix.csv"
+    # Compute average lat/lon per zip prefix
+    geo_prefix = (
+        geo.groupby("geolocation_zip_code_prefix")[
+            ["geolocation_lat", "geolocation_lng"]]
+        .mean()
+        .rename(columns={"geolocation_lat": "latitude", "geolocation_lng": "longitude"})
+        .reset_index()
     )
 
-    # Print summary statistics
-    print("\nDistance Matrix Summary:")
-    print(f"Average distance: {distance_matrix.values.mean():.2f} km")
-    print(f"Maximum distance: {distance_matrix.values.max():.2f} km")
+    # Merge to form store table
+    stores_df = sellers.merge(
+        geo_prefix,
+        left_on="seller_zip_code_prefix",
+        right_on="geolocation_zip_code_prefix",
+        how="left",
+    )
+    stores_df = stores_df.rename(
+        columns={"seller_id": "store_id", "seller_city": "city"}
+    )[["store_id", "city", "latitude", "longitude"]]
+    stores_df = stores_df.drop_duplicates(
+        subset=["store_id"]).reset_index(drop=True)
 
-    print("\nTransport Cost Matrix Summary:")
-    print(f"Average cost: {transport_cost_matrix.values.mean():,.0f} VND")
-    print(f"Maximum cost: {transport_cost_matrix.values.max():,.0f} VND")
+    # Instantiate and generate outputs
+    calc = DistanceCalculator(stores_df)
+    distance_matrix = calc.generate_distance_matrix("distance_matrix.csv")
+    transport_matrix = calc.generate_transport_cost_matrix(
+        distance_matrix, "transport_cost_matrix.csv")
+
+    print("Distance and transport cost matrices generated successfully.")
